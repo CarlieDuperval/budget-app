@@ -3,7 +3,7 @@ import { Container, Stack, Button } from "react-bootstrap";
 
 const AddBudget = () => {
   return (
-    <Container>
+    <Container className="my-4">
       <Stack direction="horizontal" gap="2" className="mb-4">
         <h1 className="me-auto">Budgets</h1>
         <Button variant="primary">Add Budget</Button>
@@ -12,4 +12,4 @@ const AddBudget = () => {
     </Container>
   );
 };
-export default AddBudget;
+export default AddBudget
