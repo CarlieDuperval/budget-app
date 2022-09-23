@@ -13,14 +13,15 @@ const AddBudget = () => {
       <div 
       style={{
         display:"grid", 
-        griTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", 
+        gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", 
         gap:"1rem", 
         alignItems:"Flex-start",
         }}
         >
-          <BudgetCard name="Entertainment"></BudgetCard>
+          <BudgetCard name="Entertainment" amount={200} max={1000}  />
          </div>
     </Container>
+    
   );
 };
 export default AddBudget

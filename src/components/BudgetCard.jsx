@@ -2,7 +2,7 @@ import React from 'react'
 import { Card } from 'react-bootstrap'
 import { currencyFormatter } from './Tools'
 
-const BudgetCard = (name, amount, max)=> {
+const BudgetCard = ({name, amount, max}) => {
   return (
     <Card>
         <Card.Body>
@@ -10,7 +10,6 @@ const BudgetCard = (name, amount, max)=> {
                 <div>{name}</div>
                 <div>
                   {currencyFormatter.format(amount)}/ {currencyFormatter.format(max)}
-                  
                   </div>
             </Card.Title>
         </Card.Body>
