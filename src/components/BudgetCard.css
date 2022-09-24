@@ -5,3 +5,11 @@
     font-weight: normal;
     margin-bottom: 3px;
 }
+
+.amount-prop{
+    display: flex;
+    align-items: baseline;
+
+}
+
+
