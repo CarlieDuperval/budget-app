@@ -18,7 +18,12 @@ const BudgetCard = ({name, amount, max}) => {
                   </div>
             </Card.Title>
             <ProgressBar className="rounded-pill" 
-            variant={ProgressBarVariant(amount, max)} 
+            variant={ProgressBarVariant(amount, max)}
+            min={0} 
+            max={max}
+            now={amount}
+
+
             />
         </Card.Body>
     </Card>
