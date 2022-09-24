@@ -1,12 +1,18 @@
 import React from 'react'
-import { Card, ProgressBar } from 'react-bootstrap'
+import { Button, Card, ProgressBar, Stack } from 'react-bootstrap'
 import { currencyFormatter } from './Tools'
 import './BudgetCard.css'
 import ProgressBarVariant from './ProgressVariant'
 
-const BudgetCard = ({name, amount, max}) => {
+const BudgetCard = ({name, amount, max, gray}) => {
+  const refColor = []
+     if (amount > max){
+      refColor.push('bg-danger', 'bg-opacity-10')
+    } else if (gray){
+      refColor.push("bg-light")
+    }
   return (
-    <Card>
+    <Card className={refColor.join(' ')}>
         <Card.Body>
             <Card.Title className='card-title'>
                 <div className='me-2'>{name}</div>
@@ -22,9 +28,18 @@ const BudgetCard = ({name, amount, max}) => {
             min={0} 
             max={max}
             now={amount}
-
-
             />
+            <Stack className='mt-4' direction='horizontal' gap='2' >
+              <Button 
+              variant='outline-primary' 
+              className='ms-auto'>
+                Add Expense
+              </Button>
+              <Button 
+              variant='outline-secondary'>
+                View Expenses
+              </Button>
+            </Stack>
         </Card.Body>
     </Card>
   )

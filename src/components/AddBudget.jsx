@@ -18,7 +18,11 @@ const AddBudget = () => {
         alignItems:"Flex-start",
         }}
         >
-          <BudgetCard name="Entertainment" amount={200} max={1000}  />
+          <BudgetCard 
+          name="Entertainment" 
+          gray 
+          amount={1200} 
+          max={1000}  />
          </div>
     </Container>
     
