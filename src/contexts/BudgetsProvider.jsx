@@ -20,7 +20,7 @@ export const BudgetsProvider = ({children }) => {
     const getBudgetExpenses = (budgetId) => {
         return expenses.filter(expense => expense.budgetId === budgetId)
     }
-    const addBudget = (name, max) => {
+const addBudget = ({name, max}) => {
         setBudgets(previewBudgets => {
             if(previewBudgets.find(budget => budget.name === name)){
                 return previewBudgets
