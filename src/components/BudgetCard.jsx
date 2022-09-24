@@ -1,7 +1,8 @@
 import React from 'react'
-import { Card } from 'react-bootstrap'
+import { Card, ProgressBar } from 'react-bootstrap'
 import { currencyFormatter } from './Tools'
 import './BudgetCard.css'
+import ProgressBarVariant from './ProgressVariant'
 
 const BudgetCard = ({name, amount, max}) => {
   return (
@@ -16,8 +17,13 @@ const BudgetCard = ({name, amount, max}) => {
                   </span>
                   </div>
             </Card.Title>
+            <ProgressBar className="rounded-pill" 
+            variant={ProgressBarVariant(amount, max)} 
+            />
         </Card.Body>
     </Card>
   )
 }
+
+
 export default BudgetCard;
