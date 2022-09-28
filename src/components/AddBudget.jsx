@@ -6,7 +6,7 @@ import {  useBudgets } from "../contexts/BudgetsProvider";
 
 const AddBudget = () => {
   const [showAddBudgetModal, setShowAddBudgetModal] = useState(false)
-  const { budgets } = useBudgets()
+  const { budgets , expenses} = useBudgets()
   return (
   <>
     <Container className="my-4">
