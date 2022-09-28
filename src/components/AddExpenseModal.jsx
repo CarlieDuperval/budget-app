@@ -4,7 +4,7 @@ import { useBudgets } from "../contexts/BudgetsProvider"
 
 
 
-const AddBudgetModal = ({show , handleClose}) => {
+const AddExpenseModal = ({show , handleClose, defaultBudgetId}) => {
     const nameRef = useRef()
     const maxRef = useRef()
     const { addBudget } = useBudgets()
@@ -50,4 +50,4 @@ const AddBudgetModal = ({show , handleClose}) => {
     )
 }
 
-export default AddBudgetModal
+export default AddExpenseModal
