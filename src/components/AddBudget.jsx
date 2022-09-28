@@ -32,7 +32,7 @@ const AddBudget = () => {
             // max={1000}
             key={budget.id} 
             name={budget.name} 
-            amount={budget.amount} 
+            amount={0} 
             max={budget.max} 
              />
           )
