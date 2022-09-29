@@ -4,7 +4,8 @@ import { currencyFormatter } from './Tools'
 import './BudgetCard.css'
 import ProgressBarVariant from './ProgressVariant'
 
-const BudgetCard = ({name, amount, max, gray}) => {
+const BudgetCard = ({name, amount, max, gray, onAddExpenseClick }) => {
+
   const refColor = []
      if (amount > max){
       refColor.push('bg-danger', 'bg-opacity-10')
@@ -32,7 +33,9 @@ const BudgetCard = ({name, amount, max, gray}) => {
             <Stack className='mt-4' direction='horizontal' gap='2' >
               <Button 
               variant='outline-primary' 
-              className='ms-auto'>
+              className='ms-auto'
+              onClick={onAddExpenseClick}
+              >
                 Add Expense
               </Button>
               <Button 
