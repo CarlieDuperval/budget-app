@@ -4,6 +4,7 @@ import BudgetCard from "./BudgetCard";
 import AddBudgetModal from "./AddBudgetModal";
 import {  useBudgets } from "../contexts/BudgetsProvider";
 import AddExpenseModal from "./AddExpenseModal";
+import UncategorizedBudgetCard from "./UncategorizedBudgetCard"
 
 const AddBudget = () => {
   const [showAddBudgetModal, setShowAddBudgetModal] = useState(false)
