@@ -47,7 +47,7 @@ const AddBudget = () => {
              />
           )
         })}
-        <UncategorizedBudgetCard />
+        <UncategorizedBudgetCard onAddExpenseClick={openAddExpenseModal} />
 
         <TotalBudgetCard  />
          </div>
