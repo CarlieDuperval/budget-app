@@ -45,6 +45,7 @@ const AddBudget = () => {
              />
           )
         })}
+        <UncategorizedBudgetCard />
          </div>
     </Container>
   <AddBudgetModal 
