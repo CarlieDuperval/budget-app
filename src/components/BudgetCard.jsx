@@ -26,12 +26,13 @@ const BudgetCard = ({name, amount, max, gray, onAddExpenseClick }) => {
                   )}
                   </div>
             </Card.Title>
-            <ProgressBar className="rounded-pill" 
+            {max && ( <ProgressBar className="rounded-pill" 
             variant={ProgressBarVariant(amount, max)}
             min={0} 
             max={max}
             now={amount}
             />
+            )}
             <Stack className='mt-4' direction='horizontal' gap='2' >
               <Button 
               variant='outline-primary' 
