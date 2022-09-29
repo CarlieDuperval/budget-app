@@ -1,5 +1,5 @@
 import React from "react"
-import { Modal, Button } from "react-bootstrap"
+import { Modal, Button , Stack} from "react-bootstrap"
 import { UNCATEGORIZED_BUDGET_ID, useBudgets } from "../contexts/BudgetsProvider"
 
 
@@ -14,26 +14,30 @@ const ViewExpensesModal = ({budgetId , handleClose}) => {
     
     return (
         <div>
-          <Modal show={budgetId !=null} onHide={handleClose}>
+          <Modal show={!budgetId !=null} onHide={handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title>
                         <Stack direction="horizontal" gap="2" >
                             <div> Expenses - {budget?.name}</div>
                             {budgetId !== UNCATEGORIZED_BUDGET_ID && (
-                                <Button onClick={() => {
+                                <Button 
+                                onClick={() => {
                                     deleteBudget(budget)
                                     handleClose()
-                                }} variant="outline-danger">Delete</Button>
+                                }} 
+                                variant="outline-danger">
+                                Delete
+                                </Button>
+                            
                             )}
+        
                         </Stack>
                         </Modal.Title>
                 </Modal.Header>
-                <Modal.Body>
-                   
-                </Modal.Body>
+                <Modal.Body></Modal.Body>
             </Modal>  
         </div>
     )
 }
 
-export default AddBudgetModal
+export default ViewExpensesModal
