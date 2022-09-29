@@ -37,10 +37,6 @@ const AddBudget = () => {
             const amount = getBudgetExpenses(budget.id).reduce((total, expense) => total + expense.amount, 0)
             return (
             <BudgetCard
-            // name="Entertainment"
-            // gray
-            // amount={1200}
-            // max={1000}
             key={budget.id} 
             name={budget.name} 
             amount={amount} 
