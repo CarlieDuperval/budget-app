@@ -10,7 +10,7 @@ const UncategorizedBudgetCard = (props) => {
 
     return(
         <>
-        <BudgetCard  amount={amount} nam="Uncategorized" gray {...props}/>
+        <BudgetCard  amount={amount} name="Uncategorized" gray {...props}/>
         
         
         </>

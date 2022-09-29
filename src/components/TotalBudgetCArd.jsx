@@ -14,7 +14,7 @@ const TotalBudgetCard = () => {
 
     return(
         <>
-        <BudgetCard  amount={amount} nam="Total" gray max={max} />
+        <BudgetCard  amount={amount} name="Total" gray max={max} />
         
         
         </>
