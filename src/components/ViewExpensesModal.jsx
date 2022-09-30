@@ -5,7 +5,7 @@ import { UNCATEGORIZED_BUDGET_ID, useBudgets } from "../contexts/BudgetsProvider
 
 
 const ViewExpensesModal = ({budgetId , handleClose}) => {
-    const { getBudgetExpenses, budgets, deleteBudget, deleteExpense } = useBudgets()
+    const {  budgets, deleteBudget } = useBudgets()
 
     const budget = UNCATEGORIZED_BUDGET_ID === budgetId 
     ? { name:"Uncategorized", id:UNCATEGORIZED_BUDGET_ID} 
@@ -18,8 +18,10 @@ const ViewExpensesModal = ({budgetId , handleClose}) => {
                 <Modal.Header closeButton>
                     <Modal.Title>
                         <Stack direction="horizontal" gap="2" >
-                            <div> Expenses - {budget?.name}</div>
-                            {budgetId !== UNCATEGORIZED_BUDGET_ID && (
+                            <div> "Expenses - ", {budget?.name}</div>
+                            {
+                            budgetId !== UNCATEGORIZED_BUDGET_ID && 
+                            (
                                 <Button 
                                 onClick={() => {
                                     deleteBudget(budget)
@@ -29,7 +31,8 @@ const ViewExpensesModal = ({budgetId , handleClose}) => {
                                 Delete
                                 </Button>
                             
-                            )}
+                            )
+                            }
         
                         </Stack>
                         </Modal.Title>

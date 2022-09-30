@@ -23,6 +23,7 @@ export const BudgetsProvider = ({children }) => {
     }
 const addBudget = ({name, max}) => {
         setBudgets(previewBudgets => {
+            // if the budget has the same name as a preview one 
             if(previewBudgets.find(budget => budget.name === name)){
                 return previewBudgets
             }
@@ -37,6 +38,7 @@ const addBudget = ({name, max}) => {
         
     } 
     const deleteBudget = ({id}) => {
+        // Todo : Deal with expenses
         setBudgets(previewBudgets => {
             return previewBudgets.filter(budget => budget.id !== id)
 

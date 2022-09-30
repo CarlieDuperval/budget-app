@@ -5,7 +5,7 @@ const LocalStorage = (key , defaultValue) => {
         const jsonValue = localStorage.getItem(key)
         if(jsonValue !=null) return JSON.parse(jsonValue)
 
-        if(typeof defaultValue === 'function'){
+        if(typeof defaultValue === "function"){
             return defaultValue()
         }else{
             return defaultValue

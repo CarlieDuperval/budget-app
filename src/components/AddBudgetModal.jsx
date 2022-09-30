@@ -13,12 +13,13 @@ const AddBudgetModal = ({show , handleClose}) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         addBudget(
-{
+        {
             name: nameRef.current.value,
             max: parseFloat(maxRef.current.value)
         })
          handleClose()
-    }
+        } 
+          
     return (
         <div>
           <Modal show={show} onHide={handleClose}>
