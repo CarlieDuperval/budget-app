@@ -38,7 +38,12 @@ const addBudget = ({name, max}) => {
         
     } 
     const deleteBudget = ({id}) => {
-        // Todo : Deal with expenses
+        setExpenses(previewExpenses => {
+            return previewExpenses.map(expense =>{
+                if (expense.budgetId !== id) return expense
+                return {...expense, budgetId: UNCATEGORIZED_BUDGET_ID}
+            })
+        })
         setBudgets(previewBudgets => {
             return previewBudgets.filter(budget => budget.id !== id)
 
