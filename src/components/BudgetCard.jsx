@@ -34,7 +34,8 @@ const BudgetCard = ({name, amount, max, gray, hideButtons, onAddExpenseClick }) 
             now={amount}
             />
             )}
-            {!hideButtons && (<Stack className='mt-4' direction='horizontal' gap='2' >
+            {!hideButtons && (
+            <Stack className='mt-4' direction='horizontal' gap='2' >
               <Button 
               variant='outline-primary' 
               className='ms-auto'
@@ -43,9 +44,7 @@ const BudgetCard = ({name, amount, max, gray, hideButtons, onAddExpenseClick }) 
                 Add Expense
               </Button>
               <Button 
-              variant='outline-secondary'>
-                View Expenses
-              </Button>
+              variant='outline-secondary'> View Expenses </Button>
             </Stack>
             )}
         </Card.Body>

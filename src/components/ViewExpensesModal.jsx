@@ -5,7 +5,7 @@ import { UNCATEGORIZED_BUDGET_ID, useBudgets } from "../contexts/BudgetsProvider
 
 
 const ViewExpensesModal = ({budgetId , handleClose}) => {
-    const {  budgets, deleteBudget } = useBudgets()
+    const { getBudgetExpenses, budgets, deleteBudget, deleteExpense } = useBudgets()
 
     const budget = UNCATEGORIZED_BUDGET_ID === budgetId 
     ? { name:"Uncategorized", id:UNCATEGORIZED_BUDGET_ID} 
