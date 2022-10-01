@@ -9,16 +9,16 @@ const ViewExpensesModal = ({budgetId , handleClose}) => {
 
     const budget = UNCATEGORIZED_BUDGET_ID === budgetId 
     ? { name:"Uncategorized", id:UNCATEGORIZED_BUDGET_ID} 
-    : budgets.find(b => b.id ===budgetId)
+    : budgets.find(b => b.id === budgetId)
     
     
     return (
         <div>
-          <Modal show={!budgetId !=null} onHide={handleClose}>
+          <Modal show={budgetId !=null} onHide={handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title>
-                        <Stack direction="horizontal" gap="2" >
-                            <div> "Expenses - ", {budget?.name}</div>
+                        {/* <Stack direction="horizontal" gap="2" >
+                            <div> Expenses - {budget?.name}</div>
                             {
                             budgetId !== UNCATEGORIZED_BUDGET_ID && 
                             (
@@ -34,7 +34,7 @@ const ViewExpensesModal = ({budgetId , handleClose}) => {
                             )
                             }
         
-                        </Stack>
+                        </Stack> */}
                         </Modal.Title>
                 </Modal.Header>
                 <Modal.Body></Modal.Body>
