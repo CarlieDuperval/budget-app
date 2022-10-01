@@ -2,7 +2,7 @@ import React from 'react'
 import { Button, Card, ProgressBar, Stack } from 'react-bootstrap'
 import { currencyFormatter } from './Tools'
 import './BudgetCard.css'
-import ProgressBarVariant from './ProgressVariant'
+import getProgressBarVariant from './ProgressVariant'
 
 const BudgetCard = ({name, amount, max, gray, hideButtons, onAddExpenseClick }) => {
 
@@ -19,15 +19,16 @@ const BudgetCard = ({name, amount, max, gray, hideButtons, onAddExpenseClick }) 
                 <div className='me-2'>{name}</div>
                 <div className='amount-prop'>
                   {currencyFormatter.format(amount)}
-                  {max && (<span className='text-muted fs-6 ms-1'>
+                  {max && (
+                  <span className='text-muted fs-6 ms-1'>
                   / {currencyFormatter.format(max)}
-                 
                   </span>
                   )}
                   </div>
             </Card.Title>
-            {max && ( <ProgressBar className="rounded-pill" 
-            variant={ProgressBarVariant(amount, max)}
+            {max && ( <ProgressBar 
+            className="rounded-pill" 
+            variant={getProgressBarVariant(amount, max)}
             min={0} 
             max={max}
             now={amount}

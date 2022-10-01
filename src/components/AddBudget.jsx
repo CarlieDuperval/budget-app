@@ -4,7 +4,7 @@ import BudgetCard from "./BudgetCard";
 import AddBudgetModal from "./AddBudgetModal";
 import {  useBudgets } from "../contexts/BudgetsProvider";
 import AddExpenseModal from "./AddExpenseModal";
-// import UncategorizedBudgetCard from "./UncategoriedBudgetCard"
+import UncategorizedBudgetCard from "./UncategorizedBudgetCard"
 import ViewExpensesModal from "./ViewExpensesModal"
 
 const AddBudget = () => {
