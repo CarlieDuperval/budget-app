@@ -4,7 +4,7 @@ import BudgetCard from "./BudgetCard";
 
 const TotalBudgetCard = () => {
     const { expenses ,budgets } = useBudgets()
-    const amount = expenses.reduce(
+    const newAmount = expenses.reduce(
         (total, expense) => total + expense.amount, 0
     )
     const max = budgets.reduce(
@@ -12,7 +12,7 @@ const TotalBudgetCard = () => {
     )
     if (max === 0) return null
 
-    return < BudgetCard amount={amount} name="Total"  gray max={max} hideButtons />
+    return < BudgetCard amount={newAmount} name="Total"  gray max={max} hideButtons />
 }
 
 export default TotalBudgetCard
