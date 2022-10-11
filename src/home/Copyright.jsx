@@ -11,7 +11,7 @@
 // }
 
 // export default Copyright
-
+import React from "react";
 import { Stack } from "react-bootstrap";
 
 

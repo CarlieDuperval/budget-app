@@ -7,6 +7,7 @@ import AddExpenseModal from "./AddExpenseModal";
 import UncategorizedBudgetCard from "./UncategorizedBudgetCard"
 import ViewExpensesModal from "./ViewExpensesModal"
 import TotalBudgetCard from "./TotalBudgetCard";
+//import Copyright from "../home/Copyright";
 
 const AddBudget = () => {
   const [showAddBudgetModal, setShowAddBudgetModal] = useState(false)
@@ -56,6 +57,7 @@ const AddBudget = () => {
         onViewExpensesClick={()=> setViewExpensesModalBudgetId(UNCATEGORIZED_BUDGET_ID)} />
 
         <TotalBudgetCard  />
+        
          </div>
     </Container>
   <AddBudgetModal 
@@ -71,6 +73,7 @@ const AddBudget = () => {
   budgetId={viewExpensesModalBudgetId}
   handleClose={()=> setViewExpensesModalBudgetId()} 
     />
+    
   </>
     
   );
