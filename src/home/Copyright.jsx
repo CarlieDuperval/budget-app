@@ -1,13 +1,33 @@
-import { Stack } from "react-bootstrap"
+// import { Stack } from "react-bootstrap"
 
-const Copyright = (props) => {
-    return (
-        <Footer
-        className="d-flex"
-        >
+// const Copyright = (props) => {
+//     return (
+//         <Footer
+//         className="d-flex"
+//         >
 
-        </Footer>
-    )
+//         </Footer>
+//     )
+// }
+
+// export default Copyright
+
+import { Stack } from "react-bootstrap";
+
+
+const  Copyright = (props)=> {
+  return (
+    <Stack mt={40}  
+      variant="body2"
+      color="text.secondary"
+      align="center"
+      {...props}
+    >
+      {"BudgetApp © By Carlie Duperval "}
+      {new Date().getFullYear()}
+      {"."}
+    </Stack>
+  );
 }
 
-export default Copyright
+export default Copyright;
