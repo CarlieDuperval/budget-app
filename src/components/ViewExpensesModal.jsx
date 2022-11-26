@@ -70,22 +70,3 @@ const ViewExpensesModal = ({budgetId , handleClose}) => {
 export default ViewExpensesModal
 
 
-
-    {/* <Stack direction="horizontal" gap="2" >
-                            <div> Expenses - {budget?.name}</div>
-                            {
-                            budgetId !== UNCATEGORIZED_BUDGET_ID && 
-                            (
-                                <Button 
-                                onClick={() => {
-                                    deleteBudget(budget)
-                                    handleClose()
-                                }} 
-                                variant="outline-danger">
-                                Delete
-                                </Button>
-                            
-                            )
-                            }
-        
-                        </Stack> */}
